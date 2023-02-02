@@ -1,0 +1,14 @@
+class Result {
+    public static int lonelyinteger(List<Integer> a) {
+    HashSet<Integer> arr=new HashSet<Integer>();
+    for(int i:a){
+        if(arr.contains(i)){
+            arr.remove(i);
+        }
+        else{
+            arr.add(i);
+        }
+    }
+    return new ArrayList<>(arr).get(0);
+    }
+}
