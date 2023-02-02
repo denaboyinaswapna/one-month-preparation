@@ -1,0 +1,9 @@
+class Result {
+    public static String timeConversion(String s) {
+      String a=s.substring(0,2);
+      int b=Integer.parseInt(a)%12;
+      if(s.endsWith("PM"))
+        b+=12;
+      return String.format("%02d",b)+s.substring(2,8);
+    }
+}
